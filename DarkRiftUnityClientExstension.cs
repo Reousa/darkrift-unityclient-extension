@@ -12,7 +12,7 @@ public static class DarkRiftUnityClientExstension
 	/// <param name="message">The message to be sent, needs to inherit from IDarkRiftSerializable</param>
 	/// <param name="sendMode"></param>
 	public static void SendMessageReliable<T>(this UnityClient client, T message)
-	where T : IDarkRiftSerializable
+	where T : IDarkRiftSerializable, IMessage
 	{
 		using (DarkRiftWriter writer = DarkRiftWriter.Create())
 		{
@@ -30,7 +30,7 @@ public static class DarkRiftUnityClientExstension
 	/// <param name="client"></param>
 	/// <param name="message">The message to be sent, needs to inherit from IDarkRiftSerializable</param>
 	public static void SendMessageUnreliable<T>(this UnityClient client, T message)
-		where T : IDarkRiftSerializable
+		where T : IDarkRiftSerializable, IMessage
 	{
 		using (DarkRiftWriter writer = DarkRiftWriter.Create())
 		{
