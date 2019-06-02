@@ -2,7 +2,7 @@ using DarkRift;
 using DarkRift.Client;
 using DarkRift.Client.Unity;
 
-public static class DarkRiftUnityClientExstension
+public static class DarkRiftUnityClientExtension
 {
 	/// <summary>
 	/// Extension method for quickly sending reliable messages to the server.
